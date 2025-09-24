@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Privacy Policy - ZipInAll</title>
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- External CSS -->
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Favicons -->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="assets/android-chrome-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href="assets/android-chrome-512x512.png"
+		/>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-flex">
+				<img src="assets/logo.png" alt="ZipInAll Logo" class="site-logo" />
+				<div class="header-content">
+					<h1>ZipInAll</h1>
+					<nav class="tabs">
+						<button class="tab-button active" data-tab="privacy">
+							Privacy Policy
+						</button>
+						<button class="tab-button" data-tab="delete">
+							Delete Your Account
+						</button>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<!-- Privacy Policy Content -->
+			<section id="privacy" class="tab-content active policy-content">
+				<div id="privacy-content">
+					<p>Loading privacy policy...</p>
+				</div>
+			</section>
+
+			<!-- Delete Account Content -->
+			<section id="delete" class="tab-content policy-content">
+				<h2>Request Account Deletion</h2>
+				<p>
+					We're sorry to see you go. To delete your account, please send an
+					email to:
+				</p>
+				<p>
+					<strong>Email:</strong>
+					<a href="mailto:reach.us.zipinall@gmail.com"
+						>reach.us.zipinall@gmail.com</a
+					>
+				</p>
+				<p>Please include the following details:</p>
+				<ul>
+					<li>Your full name</li>
+					<li>The email address associated with your account</li>
+					<li>A short request to delete your account</li>
+				</ul>
+				<p>We'll process your request within 1-3 business days.</p>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				&copy; <span id="year"></span> ZipInAll. All rights reserved.
+			</div>
+		</footer>
+
+		<!-- Marked.js for Markdown rendering -->
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script>
+			// Load and render policy.md inside #privacy-content (NOT #privacy)
+			fetch("policy.md")
+				.then((response) => response.text())
+				.then((md) => {
+					document.getElementById("privacy-content").innerHTML =
+						marked.parse(md);
+				})
+				.catch((err) => {
+					document.getElementById("privacy-content").innerHTML =
+						"<p class='error'>Failed to load privacy policy.</p>";
+					console.error(err);
+				});
+
+			const tabButtons = document.querySelectorAll(".tab-button");
+			const tabContents = document.querySelectorAll(".tab-content");
+
+			function switchToTab(tabId) {
+				tabButtons.forEach((btn) => {
+					btn.classList.toggle("active", btn.dataset.tab === tabId);
+				});
+				tabContents.forEach((content) => {
+					content.classList.toggle("active", content.id === tabId);
+				});
+			}
+
+			// Handle tab button clicks
+			tabButtons.forEach((button) => {
+				button.addEventListener("click", () => {
+					const tabId = button.getAttribute("data-tab");
+					switchToTab(tabId);
+					history.replaceState(null, "", `#${tabId}`);
+				});
+			});
+
+			// On page load, switch tab according to URL hash or default to privacy
+			const initialTab = window.location.hash.replace("#", "") || "privacy";
+			switchToTab(initialTab);
+
+			// Update footer year dynamically
+			document.getElementById("year").textContent = new Date().getFullYear();
+		</script>
+	</body>
+</html>
