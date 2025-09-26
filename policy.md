@@ -11,11 +11,14 @@ This Privacy Policy explains how the *ZipInAll – Customer App* ("we", "our", o
 When you use the Customer App, we collect the following information:
 
 - Name  
-- Phone number (verified via OTP)  
+- Phone number
+  (verified via OTP)  
 - Email address  
-- Home address and area (entered manually)  
+- Home address and area
+  (entered manually)  
 - Missed delivery reports  
-- Your subscription data (active and expired)  
+- Your subscription data
+  (active and expired)  
 
 > ❗️We do **not** collect GPS data, device data, or financial information.
 
@@ -45,7 +48,7 @@ Your data is used to:
 
 We do **not** sell, rent, or share your data with any third party.  
 
-Third-party tools (*Supabase*, *Message Central*) only process your data as needed for account creation and verification.
+Third-party tools (*Supabase*, *Message Central* ) only process your data as needed for account creation and verification.
 
 ---
 
@@ -65,7 +68,7 @@ Deleting your account will permanently erase:
 
 ## 6. Children's Privacy
 
-This App is **Suitable for all ages.**.  
+This App is **Suitable for all ages**.
 We do not knowingly collect personal information from children.
 
 ---
@@ -81,3 +84,4 @@ Updates will be posted in the App or notified to you directly.
 
 If you have any questions or wish to delete your data, please contact:  
 📧 **reach.us.zipinall@gmail.com**
+
