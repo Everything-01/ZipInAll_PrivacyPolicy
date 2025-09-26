@@ -11,14 +11,14 @@ This Privacy Policy explains how the *ZipInAll – Customer App* ("we", "our", o
 When you use the Customer App, we collect the following information:
 
 - Name  
-- Phone number
+- Phone number<br>
   (verified via OTP)  
 - Email address  
-- Home address and area
+- Home address and area<br>
   (entered manually)  
 - Missed delivery reports  
-- Your subscription data
-  (active and expired)  
+- Your subscription data<br>
+  (active and expired) 
 
 > ❗️We do **not** collect GPS data, device data, or financial information.
 
@@ -84,4 +84,5 @@ Updates will be posted in the App or notified to you directly.
 
 If you have any questions or wish to delete your data, please contact:  
 📧 **reach.us.zipinall@gmail.com**
+
 
