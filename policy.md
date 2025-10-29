@@ -2,7 +2,7 @@
 **Last Updated: 23/September/2025**
 
 We respect your privacy and are committed to protecting your personal information.  
-This Privacy Policy explains how the *ZipInAll – Customer App* ("we", "our", or "us") collects, uses, and safeguards your data.
+This Privacy Policy explains how the *ZipInAll* ("we", "our", or "us") collects, uses, and safeguards your data.
 
 ---
 
@@ -84,6 +84,4 @@ Updates will be posted in the App or notified to you directly.
 
 If you have any questions or wish to delete your data, please contact:  
 📧 **reach.us.zipinall@gmail.com**
-
-
 
